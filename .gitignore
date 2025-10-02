@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+venv_new/
+.env
+
+# Logs
+app.log
+*.log
+
+# Database - Be careful with this one!
+# If your 'database' folder contains an actual database file (like a .db file),
+# you should NOT commit it. If it contains SQL scripts for setup, you can.
+# We'll ignore the whole folder to be safe.
+database/
+data/
+
+# Machine Learning Models & Outputs
+# Model files can be huge and are not meant for Git.
+model/
+model_backup/
+static/gradcam_output/
+
+# User Uploads - NEVER commit this!
+static/uploads/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
