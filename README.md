@@ -3,6 +3,25 @@
 A web application that classifies fruits from images using a deep learning model and provides visual explanations for its predictions using Grad-CAM.
 
 
+<img width="919" height="439" alt="image" src="https://github.com/user-attachments/assets/0eeca6ff-cec3-4447-82ef-282f9becbd72" />
+
+<img width="800" height="384" alt="image" src="https://github.com/user-attachments/assets/1be6b818-b2de-4e25-bb84-055e70825d39" />
+
+
+<img width="815" height="391" alt="image" src="https://github.com/user-attachments/assets/dc611cda-2d6b-4717-9abc-95e472a7de7a" />
+
+
+<img width="884" height="420" alt="image" src="https://github.com/user-attachments/assets/7991deb1-a37b-4123-a327-2a0a48da52b8" />
+
+
+<img width="448" height="671" alt="image" src="https://github.com/user-attachments/assets/c5a79070-6d0f-403e-bdca-537efb182a4d" />
+
+
+
+<img width="577" height="616" alt="image" src="https://github.com/user-attachments/assets/8b65c8b2-9bd8-4523-8eba-86e2adeb404b" />
+
+
+
 
 ## Overview
 
@@ -27,29 +46,36 @@ All user uploads and their corresponding results are stored in a database, allow
 -   **Libraries**: NumPy, Pillow, OpenCV, Matplotlib
 
 ## Project Structure
-├── app.py # Main Flask application and routes
-├── database.py # Handles all database interactions
-├── init_db.py # Script to initialize the database and tables
-├── view_database.py # Utility to inspect the database contents
-├── requirements.txt # List of Python dependencies
-├── .gitignore # Specifies files for Git to ignore
-├── README.md # This file
+.
+├── app.py                 # Main Flask application and routes
+├── database.py            # Handles all database interactions
+├── init_db.py             # Script to initialize the database and tables
+├── view_database.py       # Utility to inspect the database contents
+├── requirements.txt       # List of Python dependencies
+├── .gitignore             # Specifies files for Git to ignore
+├── README.md              # Project documentation
 │
-├── static/ # Static assets
-│ ├── css/ # Stylesheets
-│ ├── js/ # Client-side scripts
-│ ├── uploads/ # User-uploaded images (git-ignored)
-│ └── gradcam_output/ # Generated Grad-CAM heatmaps (git-ignored)
+├── static/                # Static assets
+│   ├── css/
+│   │   └── style.css      # Main stylesheet
+│   ├── js/
+│   │   └── main.js        # Main client-side script
+│   ├── uploads/           # User-uploaded images (git-ignored)
+│   └── gradcam_output/    # Generated Grad-CAM heatmaps (git-ignored)
 │
-├── templates/ # HTML templates for web pages
-│ └── ...
+├── templates/             # HTML templates for web pages
+│   ├── index.html         # Homepage with upload form
+│   ├── result.html        # Page to show prediction and heatmap
+│   └── history.html       # Page to view past predictions
 │
-├── model/ # Trained ML model file (e.g., model.h5) (git-ignored)
+├── model/                 # Trained ML model file (git-ignored)
+│   └── fruit_model.h5     # Your trained Keras/TensorFlow model
 │
-├── data/ # Dataset or training data (git-ignored)
-├── database/ # SQLite database file (e.g., predictions.db) (git-ignored)
+├── data/                  # Dataset or training data (git-ignored)
+├── database/              # SQLite database file (git-ignored)
+│   └── predictions.db     # The SQLite database file
 │
-└── venv/ # Python virtual environment (git-ignored)
+└── venv/                  # Python virtual environment (git-ignored)
 
 
 # For Windows
@@ -74,7 +100,7 @@ Ensure the model path in app.py correctly points to your model file.
 python app.py
 
 
-#Usage
+# Usage
 Open your web browser and navigate to http://127.0.0.1:5000.
 Click the "Upload Image" button and select a fruit image from your computer.
 Submit the form to see the prediction.
@@ -82,7 +108,7 @@ The results page will display the predicted fruit, confidence score, and the Gra
 Use the navigation links to view a history of all past predictions.
 
 
-#Model & XAI Details
+# Model & XAI Details
 Model Architecture: The project uses a [e.g., ResNet50 model pre-trained on ImageNet] that was fine-tuned on a fruit dataset.
 Dataset: The model was trained on the [e.g., Fruits-360 dataset].
 Explainability (Grad-CAM): Grad-CAM (Gradient-weighted Class Activation Mapping) uses the gradients of the target class flowing into the final convolutional layer to produce a coarse localization map, highlighting important regions in the image for prediction.
