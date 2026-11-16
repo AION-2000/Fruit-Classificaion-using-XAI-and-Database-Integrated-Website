@@ -91,7 +91,7 @@
 
 </div>
 
-This application bridges the gap between **high-accuracy machine learning** and **human interpretability**. Built for production environments, it combines state-of-the-art deep learning with explainable AI techniques to create a transparent, trustworthy classification system.
+A fruit image classification application that combines a TensorFlow model with a Flask website, database-backed history and Grad-CAM visual explanations.
 
 ### 🎯 Why This Matters
 
